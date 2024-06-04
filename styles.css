@@ -52,7 +52,7 @@ p {
   display: flex;
   cursor: pointer;
   width: 40px;
-  height: 60px;
+  height: 55px;
   margin: 10px;
 }
 
@@ -112,7 +112,7 @@ p {
 
 .call-button2 {
   width: 120px;
-  background-image: linear-gradient(to top, #1085fa 0%, #0066cc 100%);
+  background-color: rgb(7, 168, 7);
   color: white;
   padding: 10px;
   border-radius: 15px;
@@ -122,12 +122,6 @@ p {
   display: none;
   text-decoration: none;
   list-style: none;
-}
-
-.call-button2:hover {
-  border-width: 0.5px;
-  border-color: black;
-  border-style: solid;
 }
 
 .call-button2 a {
