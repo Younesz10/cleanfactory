@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+/* Style for the announcement bar */
+.announcement-bar {
+  background-color: #0972e1;
+  color: #cb9191; /* Set text color */
+  padding: 10px 20px; /* Add padding to the announcement bar */
+  text-align: center; /* Center align text */
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+
+.announcement-bar a,
+p {
+  color: white;
+}
+
+.navbar {
+  background-color: white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 550;
+  position: sticky;
+  top: 40px;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+  /*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);*/
+}
+
+#navbar__logo {
+  display: flex;
+  cursor: pointer;
+  width: 40px;
+  height: 60px;
+  margin: 10px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #0972e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar__links:hover {
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.call-button {
+  width: 120px;
+  background-color: rgb(7, 168, 7);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+}
+
+.call-button:hover {
+  border-width: 0.5px;
+  border-color: black;
+  border-style: solid;
+}
+
+.call-button a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.call-button a:hover {
+  color: greenyellow;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.call-button2 {
+  width: 120px;
+  background-image: linear-gradient(to top, #1085fa 0%, #0066cc 100%);
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+  display: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.call-button2:hover {
+  border-width: 0.5px;
+  border-color: black;
+  border-style: solid;
+}
+
+.call-button2 a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.call-button2 a:hover {
+  color: greenyellow;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+  #navbar__logo {
+    display: flex;
+    cursor: pointer;
+    height: 50px;
+    margin: 10px;
+  }
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 15px;
+    width: 92%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    background: #131313;
+    transition: all 0.5s ease;
+    height: 60vh;
+    z-index: -1;
+    border-radius: 8px;
+  }
+
+  .navbar__menu.active {
+    background: white;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 40vh;
+    font-size: 1rem;
+  }
+
+  .navbar__toggle {
+    z-index: 999;
+  }
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background: red;
+  }
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 6%;
+    transform: translate(5%, 20%);
+    display: block;
+  }
+
+  .navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .call-button {
+    margin: auto;
+    width: 120px;
+    font-size: 0.9rem;
+    height: auto;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .call-button2 {
+    margin: auto;
+    width: 110px;
+    font-size: 0.8rem;
+    height: auto;
+    display: flex;
+    margin-left: 160px;
+  }
+}
