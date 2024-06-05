@@ -1,7 +1,7 @@
 /* Hero section CSS */
 
 .hero {
-  background-image: linear-gradient(to top, #1085fa 0%, #f9fafa 50%);
+  background-image: linear-gradient(to top, #0972e1 0%, #f9fafa 50%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; /* Change to "cover" */
@@ -79,4 +79,195 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+.image_carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.image_carousel h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #0972e1;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+}
+
+#prevBtn {
+  left: 0;
+}
+#nextBtn {
+  right: 0;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  background-color: #aaa;
+}
+
+@media screen and (max-width: 960px) {
+  .image_carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  .carousel {
+    display: flex;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image_carousel h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    top: 50%;
+  }
+
+  .image_collection_card {
+    padding: 10px;
+  }
+}
+.section4 {
+  padding: 10px 0;
+}
+
+.titleHero {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+  text-align: center;
+  color: #0972e1;
+  margin: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.productList {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.product-item {
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.product_image img {
+  max-width: 400px; /* Adjust the maximum width as needed */
+  max-height: 400px; /* Adjust the maximum height as needed */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  box-shadow: 0 0 15px #0000004d;
+}
+
+.product_name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slickProduct {
+  display: flex;
+  overflow: hidden;
+}
+
+.slickProduct .product-item {
+  flex: 0 0 auto;
+  margin: 0 5px; /* Adjust the margin as needed */
+}
+/* General styling for the carousel buttons */
+.slick-arrow {
+  color: black; /* Text color of the buttons */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make the buttons round */
+  width: 35px; /* Width of the buttons */
+  height: 35px; /* Height of the buttons */
+  display: flex; /* Center the arrow within the button */
+  justify-content: center; /* Center the arrow horizontally */
+  align-items: center; /* Center the arrow vertically */
+  font-size: 14px; /* Font size of the text */
+  position: absolute; /* Absolute positioning to place the buttons outside the carousel */
+  top: 50%; /* Align the buttons vertically in the middle */
+  transform: translateY(-50%); /* Adjust the vertical alignment */
+  z-index: 10; /* Ensure the buttons are above other elements */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  opacity: 0.7; /* Slight transparency */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.slick-arrow:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Specific styling for the previous button */
+.custom-prev {
+  left: 25px; /* Adjust position to the left */
+}
+
+/* Specific styling for the next button */
+.custom-next {
+  right: 25px; /* Adjust position to the right */
+}
+
+/* Optional: Add some margin to the carousel items if needed */
+.slickProduct .slick-slide {
+  margin: 0 10px; /* Adjust as necessary */
+}
+/* Ensure product images do not stretch */
+.slickProduct .product_image img {
+  max-width: 100%; /* Ensure image stays within its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline-block spacing */
+}
+
+/* Ensure product items have a fixed height to avoid resizing issues */
+.slickProduct .product-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .product-item {
+  display: none;
+}
+
+.carousel .product-item:first-child {
+  display: block;
 }
