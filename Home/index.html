@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clean Factory</title>
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/homepage.css" />
+    <link rel="stylesheet" href="/Home/home.css" />
+
     <script src="js/bootstrap.bundle.js"></script>
     <script
       src="https://kit.fontawesome.com/eb9a0b4ec9.js"
@@ -39,16 +40,11 @@
     </div>
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/" id="navbar__logo"
-          ><img src="/Images/Clean-Logo.png" alt="Flona company"
-        /></a>
-        <ul class="call-button2">
-          <li>
-            <a href="tel:+9647503181817" class="fa fa-phone">
-              <b>CALL NOW</b>
-            </a>
-          </li>
-        </ul>
+        <div class="call-button">
+          <a href="tel:+9647733777064" class="fa fa-phone">
+            <b>CALL NOW</b>
+          </a>
+        </div>
 
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -60,22 +56,33 @@
           <li class="navbar__item">
             <a href="/" class="navbar__links">HOME</a>
           </li>
+
           <li class="navbar__item">
-            <a href="/about.html" class="navbar__links">ABOUT US</a>
+            <a href="/About/about.html" class="navbar__links">ABOUT US</a>
           </li>
           <li class="navbar__item">
-            <a href="/products.html" class="navbar__links">PRODUCTS</a>
-          </li>
-          <li class="navbar__item">
-            <a href="/contact.html" class="navbar__links">CONTACT</a>
-          </li>
-          <li class="call-button">
-            <a href="tel:+9647503181817" class="fa fa-phone">
-              <b>CALL NOW</b>
-            </a>
+            <a href="/Contact/contact.html" class="navbar__links">CONTACT</a>
           </li>
         </ul>
       </div>
     </nav>
+    <!-- Hero Section -->
+
+    <div class="hero">
+      <div class="hero_container">
+        <div class="hero_content">
+          <div class="hero_card">
+            <div class="logo">
+              <img src="/Images/Clean-Logo.png" alt="Company Logo" />
+            </div>
+            <p>
+              Manufacturing a a wide range of high-quality detergents for
+              household, industrial, and specialized applications
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
   </body>
 </html>
