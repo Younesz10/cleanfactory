@@ -72,6 +72,30 @@ $(document).ready(function () {
       },
     ],
   });
+  $("#carousel3").slick({
+    prevArrow: $("#prevBtn3"),
+    nextArrow: $("#nextBtn3"),
+    slidesToShow: 3, // Adjust this value as needed
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
 
   // Add more carousel initializations as needed for additional carousels
 });
